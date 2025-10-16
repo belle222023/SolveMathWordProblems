@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Merriweather", "Georgia", serif;
+  color: #1c2e2d;
+  background: #ffffff;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ====== Header ====== */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1c6f58;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.site-header:hover {
+  background: linear-gradient(90deg, #1c6f58, #028e8c);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #e4f2ec;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #4ec292;
+  transition: 0.3s;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #4ec292;
+  text-shadow: 0 0 6px #4ec292, 0 0 12px #028e8c;
+}
+
+
+/* ===== BOOK SECTION ===== */
+.book-section {
+  background: #f9f9f9;
+  padding: 5rem 0;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #222;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffcc00;
+  margin: 1rem auto 0;
+  border-radius: 4px;
+}
+.book-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.book-card img {
+  width: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.book-card img:hover {
+  transform: scale(1.03);
+}
+.book-info {
+  flex: 1;
+}
+.book-info h3 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+.book-info p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.book-info ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  color: #333;
+}
+.book-info li {
+  margin-bottom: 0.4rem;
+}
+.btn {
+  background: #ffcc00;
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #111;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .book-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .book-card img {
+    width: 80%;
+    max-width: 280px;
+  }
+}
+/* ===== Upcoming Projects ===== */
+.projects-section {
+  padding: 80px 20px;
+  background-color: #e6f7ee; /* soft green background */
+  text-align: center;
+}
+
+.projects-section .section-title {
+  color: #28a745; /* primary green */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.15);
+}
+
+.project-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.project-text {
+  font-size: 1.2rem;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* ===== List of Books ===== */
+.list-books-section {
+  padding: 80px 20px;
+  background-color: #f0f8ff; /* soft blue background */
+  text-align: center;
+}
+
+.list-books-section .section-title {
+  color: #007bff; /* secondary blue */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.books-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.book-item {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.15);
+}
+
+.book-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.book-item h3 {
+  color: #28a745;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.book-item p {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.book-item .btn {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.book-item .btn:hover {
+  background-color: #0056b3;
+}
