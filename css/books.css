@@ -79,7 +79,42 @@ html, body {
   color: #4ec292;
   text-shadow: 0 0 6px #4ec292, 0 0 12px #028e8c;
 }
+/* Hamburger button */
+.menu-toggle {
+  display: none; /* hide by default */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #e4f2ec;
+  cursor: pointer;
+}
 
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* hide nav links on mobile */
+    flex-direction: column;
+    background: #1c6f58;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav a {
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger button */
+  }
+
+  .nav.show {
+    display: flex; /* show nav when toggled */
+  }
+}
 
 /* ===== BOOK SECTION ===== */
 .book-section {
