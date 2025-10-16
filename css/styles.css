@@ -998,4 +998,117 @@ footer {
   background: linear-gradient(145deg, #7ec5ae, #ffffff);
   border-left: 5px solid #6ba78a; /* Yellow accent */
 }
+/* ===== AUTHOR INTRO SECTION ===== */
+.author-intro {
+  background: linear-gradient(180deg, #f8fffc, #e7f8f1);
+  padding: 5rem 1.5rem;
+  color: #043927;
+}
+
+.author-intro .split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+
+/* Reverse layout for alternating sections */
+.author-intro .split.reverse {
+  flex-direction: row-reverse;
+}
+
+/* TEXT AREA */
+.author-intro .text {
+  flex: 1 1 520px;
+}
+
+.author-intro .text h2,
+.author-intro .text h3 {
+  font-family: "Playfair Display", serif;
+  color: #1c6f58;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.author-intro .text h2 {
+  font-size: 2.4rem;
+}
+
+.author-intro .text h3 {
+  font-size: 1.9rem;
+}
+
+.author-intro .text h2::after,
+.author-intro .text h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1e6cb4;
+  margin-top: 8px;
+}
+
+.author-intro .text p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #222;
+  text-align: justify;
+}
+
+/* IMAGE AREA */
+.author-intro .image {
+  flex: 1 1 420px;
+  text-align: center;
+}
+
+.author-intro .image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.author-intro .image img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  .author-intro {
+    padding: 3rem 1rem;
+  }
+
+  .author-intro .split {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .author-intro .split.reverse {
+    flex-direction: column;
+  }
+
+  .author-intro .text h2 {
+    font-size: 2rem;
+  }
+
+  .author-intro .text h3 {
+    font-size: 1.6rem;
+  }
+
+  .author-intro .text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .author-intro .image img {
+    max-width: 280px;
+    margin-top: 1rem;
+  }
+}
+
 
