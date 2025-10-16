@@ -1001,10 +1001,13 @@ footer {
 /* ===== AUTHOR INTRO SECTION ===== */
 .author-intro {
   background: linear-gradient(180deg, #f8fffc, #e7f8f1);
-  padding: 5rem 1.5rem;
+  padding: 5rem 2rem;
   color: #043927;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* FLEX CONTAINER */
 .author-intro .split {
   display: flex;
   align-items: center;
@@ -1014,14 +1017,15 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Reverse layout for alternating sections */
+/* REVERSE LAYOUT FOR ALTERNATING SECTIONS */
 .author-intro .split.reverse {
   flex-direction: row-reverse;
 }
 
 /* TEXT AREA */
 .author-intro .text {
-  flex: 1 1 520px;
+  flex: 1 1 50%;
+  max-width: 50%;
 }
 
 .author-intro .text h2,
@@ -1059,13 +1063,14 @@ footer {
 
 /* IMAGE AREA */
 .author-intro .image {
-  flex: 1 1 420px;
+  flex: 1 1 50%;
+  max-width: 50%;
   text-align: center;
 }
 
 .author-intro .image img {
   width: 100%;
-  max-width: 380px;
+  max-width: 100%;
   border-radius: 16px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -1079,17 +1084,23 @@ footer {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 900px) {
   .author-intro {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
   }
 
   .author-intro .split {
     flex-direction: column;
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
   }
 
   .author-intro .split.reverse {
     flex-direction: column;
+  }
+
+  .author-intro .text,
+  .author-intro .image {
+    max-width: 100%;
+    flex: 1 1 100%;
   }
 
   .author-intro .text h2 {
@@ -1106,7 +1117,7 @@ footer {
   }
 
   .author-intro .image img {
-    max-width: 280px;
+    max-width: 320px;
     margin-top: 1rem;
   }
 }
