@@ -4,18 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Books — Jerry Knoelke</title>
-  <link rel="stylesheet" href="css/books.css" />
+  <link rel="stylesheet" href="/css/books.css" />
 </head>
 <body>
-  <!-- HEADER -->
+<!-- HEADER -->
   <header class="site-header">
     <div class="container header-content">
       <h1 class="logo">Jerry Knoelke</h1>
-      <nav class="nav">
+
+      <!-- Hamburger button for mobile -->
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+      <nav class="nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" >About</a>
         <a href="gallery.html">Gallery</a>
-        <a href="books.html" class="active">Books</a>
+        <a href="books.html"class="active">Books</a>
         <a href="contacts.html">Contacts</a>
       </nav>
     </div>
@@ -27,7 +31,7 @@
       <h2 class="section-title">Books by Jerry Knoelke</h2>
 
       <div class="book-card">
-        <img src="images/book-cover.jpg" alt="Math Is Not Magic book cover" />
+        <img src="/images/book-cover.jpg" alt="Math Is Not Magic book cover" />
         <div class="book-info">
           <h3>Math Is Not Magic</h3>
           <p>
@@ -67,7 +71,7 @@
     <h2 class="section-title">List of My Books</h2>
     <div class="books-grid">
       <div class="book-item">
-        <img src="images/book-cover.jpg" alt="Math Is Not Magic book cover" />
+        <img src="/images/book-cover.jpg" alt="Math Is Not Magic book cover" />
         <h3>Math Is Not Magic</h3>
         <p>Discover the PRESS routine that transforms confusion into clarity when solving math word problems.</p>
     </div>
@@ -81,6 +85,14 @@
       <p>© 2025 Jerry Knoelke — All Rights Reserved</p>
     </div>
   </footer>
+  <script>
+    // Mobile nav toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
-
