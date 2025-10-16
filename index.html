@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- HEADER -->
+ <!-- HEADER -->
   <header class="site-header">
     <div class="container header-content">
       <h1 class="logo">Jerry Knoelke</h1>
+
+      <!-- Hamburger button for mobile -->
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
       <nav class="nav" aria-label="Primary navigation">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -175,12 +179,20 @@ function spin3D() {
 }
 
 spin3D();
+    // Mobile nav toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
 
 
 
   </script>
 </body>
 </html>
+
 
 
 
